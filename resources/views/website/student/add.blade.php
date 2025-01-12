@@ -20,6 +20,9 @@
                                 <label for="" class="col-md-3 form-control-label">Name</label>
                                 <div class="col-9">
                                     <input type="text" name="name" class="form-control">
+                                    @error('name')
+                                    <span class="text-danger">{{$message}}</span>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -27,6 +30,9 @@
                                 <label for="" class="col-md-3 form-control-label">Address</label>
                                 <div class="col-9">
                                     <input type="text" name="address" class="form-control">
+                                    @error('address')
+                                    <span class="text-danger">{{$message}}</span>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -34,6 +40,9 @@
                                 <label for="" class="col-md-3 form-control-label">Mobile</label>
                                 <div class="col-9">
                                     <input type="text" name="mobile" class="form-control">
+                                    @error('mobile')
+                                    <span class="text-danger">{{$message}}</span>
+                                    @enderror
                                 </div>
                             </div>
 

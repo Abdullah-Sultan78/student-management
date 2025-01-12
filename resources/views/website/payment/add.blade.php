@@ -20,6 +20,9 @@
                                 <label for="" class="col-md-3 form-control-label">Enrollment No</label>
                                 <div class="col-9">
                                     <input type="text" name="enrollment_id" class="form-control">
+                                    @error('enrollment_id')
+                                    <span class="text-danger">{{$message}}</span>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -27,6 +30,9 @@
                                 <label for="" class="col-md-3 form-control-label">Paid Date</label>
                                 <div class="col-9">
                                     <input type="text" name="paid_date" class="form-control">
+                                    @error('paid_date')
+                                    <span class="text-danger">{{$message}}</span>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -34,6 +40,9 @@
                                 <label for="" class="col-md-3 form-control-label">Amount</label>
                                 <div class="col-9">
                                     <input type="text" name="amount" class="form-control">
+                                    @error('amount')
+                                    <span class="text-danger">{{$message}}</span>
+                                    @enderror
                                 </div>
                             </div>
 

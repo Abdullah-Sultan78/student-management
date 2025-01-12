@@ -38,7 +38,11 @@ class BatchController extends Controller
      */
     public function store(Request $request)
     {
-
+        $request ->validate([
+            'name' =>'required',
+            'course_id' =>'required',
+            'start_date' =>'required'
+        ]);
         Batch::newBatch($request);
         return back()->with('message','Batch info created successfully');
 

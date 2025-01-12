@@ -31,6 +31,12 @@ class PaymentController extends Controller
      */
     public function store(Request $request)
     {
+        $request ->validate([
+            'enrollment_id' =>'required',
+            'paid_date' =>'required',
+            'amount' =>'required',
+        ]);
+
 //        return $request;
         Payment::newPayment($request);
         return back()->with('message','Batch info created successfully');

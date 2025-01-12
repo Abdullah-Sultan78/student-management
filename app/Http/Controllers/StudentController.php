@@ -38,6 +38,13 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
+        $request ->validate([
+            'name' =>'required',
+            'address' =>'required',
+            'mobile' =>'required|unique:students,mobile'
+        ]);
+
+
         Student::newStudent($request);
         return back()->with('message','Student info created successfully');
     }

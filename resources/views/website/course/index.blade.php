@@ -15,8 +15,8 @@
                         <table class="table table-bordered table-striped table-hover mt-3">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Course</th>
+                                    <th>Course Name</th>
+                                    <th>Course Syllabus</th>
                                     <th>Duration</th>
                                     <th>Action</th>
                                 </tr>

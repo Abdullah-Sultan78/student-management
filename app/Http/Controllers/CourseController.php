@@ -30,6 +30,11 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
+        $request ->validate([
+            'name' =>'required',
+            'syllabus' =>'required',
+            'duration' =>'required'
+        ]);
         Course::newCourses($request);
         return back()->with('message','Course Created successfully');
     }

@@ -24,6 +24,7 @@ class EnrollmentController extends Controller
      */
     public function create()
     {
+
         return view('website.enroll.add',[
             'batchs'=>Batch::all(),
             'students'=>Student::all()
@@ -35,6 +36,14 @@ class EnrollmentController extends Controller
      */
     public function store(Request $request)
     {
+        $request ->validate([
+            'enroll_no' =>'required',
+            'batch_id' =>'required',
+            'student_id' =>'required',
+            'join_date' =>'required',
+            'fee' =>'required',
+        ]);
+      
         Enrollment::newEnroll($request);
         return back()->with('message','Enrollment info created successfully');
     }

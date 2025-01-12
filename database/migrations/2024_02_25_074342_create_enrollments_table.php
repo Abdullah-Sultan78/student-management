@@ -15,7 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('enroll_no');
             $table->unsignedBigInteger('batch_id');
+            $table->foreign('batch_id')->references('id')->on('batches')->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('student_id');
+            $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade')->onUpdate('cascade');
             $table->text('join_date');
             $table->double('fee');
             $table->timestamps();

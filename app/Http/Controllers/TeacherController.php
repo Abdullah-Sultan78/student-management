@@ -31,6 +31,11 @@ class TeacherController extends Controller
      */
     public function store(Request $request)
     {
+        $request ->validate([
+            'name' =>'required',
+            'address' =>'required',
+            'mobile' =>'required|unique:teachers,mobile'
+        ]);
         Teacher::newTeacher($request);
         return back()->with('message','Teacher created successfully');
     }

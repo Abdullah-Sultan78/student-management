@@ -26,7 +26,7 @@
                                 <tr>
                                     <td>{{$payment->enrollment_id}}</td>
                                     <td>{{date('Y-m-d', strtotime($payment->paid_date))}}</td>
-                                    <td>{{$payment->amount}}</td>
+                                    <td>${{$payment->amount}}</td>
 
                                     <td class="d-flex">
                                         <a href="{{route('payment.show',$payment->id)}}" class="btn btn-success m-1">Show</a>

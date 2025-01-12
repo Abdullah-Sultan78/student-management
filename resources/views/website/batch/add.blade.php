@@ -20,18 +20,24 @@
                                 <label for="" class="col-md-3 form-control-label">Batch Name</label>
                                 <div class="col-9">
                                     <input type="text" name="name" class="form-control">
+                                    @error('name')
+                                    <span class="text-danger">{{$message}}</span>
+                                    @enderror
                                 </div>
                             </div>
 
                             <div class="row form-group my-3">
                                 <label for="" class="col-md-3 form-control-label">Course Name</label>
                                 <div class="col-9">
-                                    <select class="form-control" name="course_id"  required>
+                                    <select class="form-control" name="course_id"  >
                                         <option value="" disabled selected>-- Select Course --</option>
                                         @foreach($courses as $course)
                                             <option value="{{$course->id}}">{{$course->name}}</option>
                                         @endforeach
                                     </select>
+                                    @error('course_id')
+                                    <span class="text-danger">{{$message}}</span>
+                                    @enderror
                                 </div>
                             </div>
 
@@ -39,6 +45,9 @@
                                 <label for="" class="col-md-3 form-control-label">Start Date</label>
                                 <div class="col-9">
                                     <input type="text" name="start_date" class="form-control">
+                                    @error('start_date')
+                                    <span class="text-danger">{{$message}}</span>
+                                    @enderror
                                 </div>
                             </div>
 

@@ -13,6 +13,7 @@ class Enrollment extends Model
 
     public static function newEnroll($request)
     {
+        
         self::$enroll = new Enrollment();
         self::$enroll->enroll_no = $request->enroll_no;
         self::$enroll->batch_id = $request->batch_id;
